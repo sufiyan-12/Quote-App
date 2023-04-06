@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/main_back"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/title"
+        android:textStyle=""
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="QUOTIFY"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:textSize="38sp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="120dp"
+        />
+    <LinearLayout
+        android:id="@+id/item_layout"
+        android:layout_below="@id/title"
+        android:layout_width="330dp"
+        android:layout_height="300dp"
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:background="@drawable/item_back"
+        android:layout_centerHorizontal="true">
+
+        <View
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="start"
+            android:layout_margin="12dp"
+            android:background="@drawable/ic_quote"/>
+
+        <TextView
+            android:id="@+id/quoteText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#494949"
+            android:textSize="18sp"
+            android:layout_margin="10dp"
+            android:text="Hello World"
+            android:layout_gravity="center"
+            android:fontFamily="serif"/>
+
+        <TextView
+            android:id="@+id/authorText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="author: "
+            android:textColor="#9E9494"
+            android:textSize="16sp"
+            android:layout_marginStart="12dp"
+            android:layout_marginBottom="12dp"
+            />
+    </LinearLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/shareBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/item_layout"
+        android:layout_alignBottom="@id/item_layout"
+        android:layout_marginEnd="30dp"
+        android:layout_gravity="end"
+        android:src="@drawable/ic_share"/>
+
+        <TextView
+            android:id="@+id/previousBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:textSize="16sp"
+            android:textAllCaps="true"
+            android:drawableStart="@drawable/ic_left"
+            android:layout_marginStart="22dp"
+            android:layout_marginBottom="12dp"
+            android:textColor="#f2f2f2"
+            android:text="Previous"/>
+
+        <TextView
+            android:id="@+id/nextBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:textSize="16sp"
+            android:textAllCaps="true"
+            android:drawableEnd="@drawable/ic_right"
+            android:layout_marginEnd="22dp"
+            android:layout_marginBottom="12dp"
+            android:textColor="#f2f2f2"
+            android:text="Next"/>
+    </RelativeLayout>
+
+</LinearLayout>
